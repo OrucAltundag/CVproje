@@ -1,0 +1,105 @@
+﻿@using CV_Proje.Models.Entity
+@model List<TBL_YETENEKLER>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@{
+    string renk = "", renkoran = "";
+}
+
+
+
+<h2>YETENEK LİSTESİ</h2>
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Yetenek Listem</h3>
+                            </div>
+                            <!-- /.card-header -->
+
+                            <div class="card-body">
+                                <a href="/Yetenek/YeniYetenek" class="btn btn-info">Yeni Yetenek Ekle</a>
+                                <br />
+                                <br />
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr style="text-align:center">
+                                            <th style="width: 10px">#</th>
+                                            <th style="text-align:center">Yetenek</th>
+                                            <th style="text-align:center">Derece</th>
+                                            <th style=" width: 40px;text-align:center">Oran</th>
+                                            <th style="text-align:center">İşlemler</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="text-align:center">
+                                        @foreach (var item in Model)
+                                        {
+
+                                            if (item.Oran >= 0 && item.Oran <= 30)
+                                            {
+                                                renk = "progress-bar bg-danger";
+                                                renkoran = "badge bg-danger";
+                                            }
+                                            if (item.Oran >= 31 && item.Oran <= 55)
+                                            {
+                                                renk = "progress-bar bg-primary";
+                                                renkoran = "badge bg-primary";
+                                            }
+                                            if (item.Oran >= 56 && item.Oran <= 79)
+                                            {
+                                                renk = "progress-bar bg-warning";
+                                                renkoran = "badge bg-warning";
+                                            }
+                                            if (item.Oran >= 80 && item.Oran <= 100)
+                                            {
+                                                renk = "progress-bar bg-success";
+                                                renkoran = "badge bg-success";
+                                            }
+
+                                            <tr>
+                                                <td>@item.ID</td>
+                                                <td>@item.Yetenek</td>
+
+                                                <td>
+                                                    <div class="progress progress-xs">
+                                                        <div class="@renk" style="width: @item.Oran%"></div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="@renkoran">@item.Oran%</span></td>
+
+                                                <td>
+                                                    <a href="/Yetenek/YetenekSil/@item.ID" class="btn btn-danger btn-sm">
+                                                        <i class="fas fa-trash-restore-alt">Sil</i>
+                                                    </a>
+                                                    <a href="/Yetenek/YetenekDuzenle/@item.ID" class="btn btn-info btn-sm">
+                                                        <i class="fas fa-pencil-alt">Güncelle</i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

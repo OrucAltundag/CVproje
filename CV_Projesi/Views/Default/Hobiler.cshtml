@@ -1,0 +1,14 @@
+﻿@using CV_Proje.Models.Entity
+
+@model List<TBL_HOBILERIM>
+
+<div class="resume-section-content">
+    <h2 class="mb-5">Hobilerim</h2>
+    @foreach (var x in Model)
+    {
+        <p><h3>@x.Aciklama1</h3></p>
+        <p class="mb-0">@x.Aciklama2</p>
+        <br />
+        <br />
+    }
+</div>

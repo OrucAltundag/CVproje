@@ -1,0 +1,41 @@
+﻿@using CV_Proje.Models.Entity
+@model List<TBL_ADMIN>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2> Admin İşlemleri  </h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th> ID</th>
+        <th> Kullanıcı Adı</th>
+        <th> Düzenle</th>
+        <th> Kaldır</th>
+
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td> @item.ID</td>  <!-- Admin'in ID'sini görüntüler. -->
+            <td> @item.KullaniciAdi</td>
+
+            <td><a href="/Admin/AdminDuzenle/@item.ID" class="btn btn-warning">Düzenle</a></td>
+            <!-- Düzenleme bağlantısı, ilgili ID'yi URL'de göndererek çalışır.
+    Bootstrap "btn" ve "btn-warning" sınıfları ile turuncu bir düğme stili uygulanır. -->
+
+            <td><a href="/Admin/AdminSil/@item.ID" class="btn btn-danger">Sil</a></td>
+            <!-- Silme bağlantısı, ilgili ID'yi URL'de göndererek çalışır.
+    Bootstrap "btn" ve "btn-danger" sınıfları ile kırmızı bir düğme stili uygulanır. -->
+
+
+        </tr>
+    }
+
+</table>
+
+<a href="/Admin/AdminEkle/" class="btn btn-primary">Yeni Kullanıcı Ekle</a>
+<!-- Yeni kullanıcı ekleme sayfasına yönlendiren bir bağlantı düğmesi.
+Bootstrap "btn" ve "btn-primary" sınıfları ile mavi bir düğme tasarlanır. -->

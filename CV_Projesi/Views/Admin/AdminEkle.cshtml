@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "AdminEkle"; // Sayfanın başlığını "AdminEkle" olarak ayarlıyoruz.
+    Layout = "~/Views/Shared/_AdminLayout.cshtml"; // Sayfa düzeni için ortak bir layout kullanılıyor.
+}
+
+<br />
+<H4>Yeni Kullanıcı Ekleme Sayfası</H4> <!-- Sayfa için açıklayıcı bir başlık metni. -->
+<br />
+<form method="post">
+    <!-- Form verilerini sunucuya gönderirken POST metodu kullanılıyor. -->
+
+    <input type="text" name="KullaniciAdi" class="form-control" placeholder="Kullanıcı Adınızı giriniz" value="" />
+    <!-- Kullanıcı adı girişi için bir metin kutusu.
+         name="KullaniciAdi": Gönderilen form verisinde bu alanın adı.
+         class="form-control": Bootstrap ile stil uygulamak için kullanılıyor.
+         placeholder="Kullanıcı Adınızı giriniz": Kullanıcıya rehberlik edecek açıklama metni.
+         value="": Varsayılan olarak boş bir değer atanmış. -->
+    <br />
+    <input type="text" name="Sifre" class="form-control" placeholder="Şifre Giriniz" value="" />
+    <!-- Şifre girişi için bir metin kutusu.
+         name="Sifre": Gönderilen form verisinde bu alanın adı.
+         class="form-control": Bootstrap ile stil uygulamak için kullanılıyor.
+         placeholder="Şifre Giriniz": Kullanıcıya rehberlik edecek açıklama metni.
+         value="": Varsayılan olarak boş bir değer atanmış. -->
+    <br />
+
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+    <!-- Formu göndermek için bir düğme eklenir. Bootstrap'in "btn" ve "btn-info" sınıfları ile mavi tonlarda bir düğme oluşturulur. -->
+
+</form>

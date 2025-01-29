@@ -1,0 +1,28 @@
+﻿@model CV_Proje.Models.Entity.TBL_SERTIFIKALARIM   
+@{ ViewBag.Title = "YeniSertifika"; 
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    }
+
+
+
+
+
+<br />
+<H4> Yeni Sertifa Ekleme Sayfası</H4>
+<br />
+<form method="post">
+    <!-- Form başlatılır, veriler POST yöntemiyle sunucuya gönderilecektir. -->
+
+
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" }) <!-- 'Aciklama' alanı için bir metin kutusu oluşturur. class ile form-control sınıfı atanır, bu da Bootstrap stilini uygular. -->
+    <br />
+    @Html.Label("Alt Başlık")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" }) <!-- 'Tarih' alanı için bir metin kutusu oluşturur. class ile form-control sınıfı atanır. -->
+
+
+    <br />
+    <button class="btn btn-primary">Kaydet</button> <!-- Formu göndermek için bir buton oluşturulur. Buton Bootstrap stiline uygun olarak "btn btn-primary" sınıfına sahip olur. -->
+
+</form>

@@ -1,0 +1,33 @@
+﻿@using CV_Proje.Models.Entity
+
+@model List<TBL_YETENEKLER>
+
+
+<div class="resume-section-content">
+    <h2 class="mb-5">YETENEKLERİM</h2>
+
+    <div class="subheading mb-3">Programming Languages & Tools</div>
+    <ul class="list-inline dev-icons">
+      
+            <!-- Programlama dillerinin ve araçlarının simgelerini listelemek için bir liste -->
+            <li class="list-inline-item"><i class="fab fa-html5"></i></li> <!-- HTML5 simgesi -->
+            <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li> <!-- CSS3 simgesi -->
+            <li class="list-inline-item"><i class="fab fa-cuttlefish"></i></li> <!-- C++ veya diğer C tabanlı diller için simge -->
+            <li class="list-inline-item"><i class="fab fa-microsoft"></i></li> <!-- Microsoft teknolojileri simgesi -->
+            <li class="list-inline-item"><i class="fab fa-python"></i></li> <!-- Python simgesi -->
+            <li class="list-inline-item"><i class="fas fa-chart-pie"></i></li> <!-- Veri görselleştirme simgesi -->
+            <li class="list-inline-item"><i class="fab fa-cuttlefish"></i></li> <!-- Bir başka C tabanlı dil simgesi -->
+            <li class="list-inline-item"><i class="fas fa-database"></i></li> <!-- Veritabanı simgesi -->
+            <li class="list-inline-item"><i class="fas fa-sign-language"></i></li> <!-- Diğer beceriler için genel simge -->
+        </ul>
+    <div class="subheading mb-3">Becerilerim</div> <!-- Becerilerim alt başlığı -->
+    <ul class="fa-ul mb-0">   <!-- Kullanıcının veritabanından gelen becerilerinin listeleneceği alan -->
+        @foreach (var x in Model)   // Veritabanından gelen TBL_YETENEKLER modelindeki her bir öğe üzerinde döngü 
+        {
+            <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>  <!-- Her yetenek için onay işareti simgesi -->
+                @x.Yetenek  <!-- Yeteneğin açıklamasını yazdırır -->
+            </li>
+        }
+    </ul>
+</div>

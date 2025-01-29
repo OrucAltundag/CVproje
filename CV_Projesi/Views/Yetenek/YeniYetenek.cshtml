@@ -1,0 +1,20 @@
+﻿@model CV_Proje.Models.Entity.TBL_YETENEKLER
+
+@{
+    ViewBag.Title = "YeniYetenek";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+    <H4>Yeni Deneyim Ekleme Sayfası</H4>
+    <br />
+    <form method="post">
+
+        <input type="text" name="Yetenek" class="form-control" placeholder="Yeteneği Yazınınz" value="" />
+        <br />
+        <input type="text" name="Oran" class="form-control" placeholder="Derecenizi belirtiniz" value="" />
+        <br /> <br />
+        <button class="btn btn-info">Kaydet</button>
+
+    </form>
+

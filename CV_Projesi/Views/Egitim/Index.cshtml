@@ -1,0 +1,45 @@
+﻿
+
+@using CV_Proje.Models.Entity
+@model List<TBL_EGITIMLERIM>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Eğitimlerin Listesi   </h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th> ID</th>
+        <th> Başlık</th>
+        <th> Alt Başlık 1</th>
+        <th> Alt Başlık 2</th>
+        <th> GNO</th>
+        <th> Tarih</th>
+        <th> Sil</th>
+        <th> Düzenle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td> @item.ID</td>
+            <td> @item.Baslik</td>
+            <td> @item.AltBaslik1</td>
+            <td> @item.AltBaslik2</td>
+            <td> @item.GNO</td>
+            <td> @item.Tarih</td>
+
+            <td><a href="/Egitim/EgitimSil/@item.ID" class="btn btn-danger"> <i class="fas fa-trash-restore-alt">Sil</i></a></td>
+            <td><a href="/Egitim/EgitimDuzenle/@item.ID" class="btn btn-warning"> <i class="fas fa-pencil-alt">Güncelle</i></a></td>
+
+        </tr>
+    }
+    
+</table>
+<a href="/Egitim/EgitimEkle" class="btn btn-primary">Yeni Egitim Bilgisi Ekle</a>
+
+
+
+
+

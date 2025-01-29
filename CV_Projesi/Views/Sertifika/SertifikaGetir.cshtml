@@ -1,0 +1,29 @@
+﻿@model CV_Proje.Models.Entity.TBL_SERTIFIKALARIM
+@{
+    ViewBag.Title = "SertifikaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<br />
+<H4> Sertifa Düzenleme Sayfası</H4> 
+<br />
+<form method="post">
+    <!-- Form başlatılır, method="post" ile verilerin sunucuya POST yöntemiyle gönderileceği belirtilir. -->
+
+    <br />
+    @Html.Label("Başlık")  <!-- Kullanıcıya "Başlık" yazısını gösterir. -->
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" }) <!-- 'Aciklama' alanı için bir metin kutusu oluşturur, CSS için 'form-control' sınıfı atanır. -->
+    <br />
+    @Html.Label("Alt Başlık")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })  <!-- 'Tarih' alanı için bir metin kutusu oluşturur, CSS için 'form-control' sınıfı atanır. -->
+
+
+
+    <br />
+    <button class="btn btn-success">Güncelle</button> <!-- Formu göndermek için bir buton oluşturur, yeşil renkli ve Bootstrap uyumlu. -->
+    <a class="btn btn-danger" href="/Sertifika/SertifikaSil/@ViewBag.d">Sil</a><!-- Kullanıcıyı sertifika silme işlemine yönlendiren bir bağlantı oluşturur. ID değeri ViewBag.d'den alınır. -->
+
+</form>
+

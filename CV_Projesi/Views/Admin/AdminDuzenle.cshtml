@@ -1,0 +1,31 @@
+﻿@model CV_Proje.Models.Entity.TBL_ADMIN
+@{
+    ViewBag.Title = "AdminDuzenle"; // Sayfanın başlığını "AdminDuzenle" olarak ayarlıyoruz.
+    Layout = "~/Views/Shared/_AdminLayout.cshtml"; // Sayfa düzeni için ortak bir layout kullanılıyor.
+}
+<br />
+<H4> Kullanıcı Güncelleme Sayfası</H4> <!-- Sayfada görüntülenecek başlık metni. -->
+<br />
+<form method="post">
+    <!-- Form verilerini sunucuya gönderirken POST metodu kullanılıyor. -->
+    @Html.Label("Admin ID") <!-- "Admin ID" için bir etiket oluşturur. -->
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <!-- Admin ID'si için giriş kutusu oluşturulur.
+         TextBoxFor metodu, modeldeki ID özelliğine bağlanır ve Bootstrap'in "form-control" sınıfıyla stil uygulanır. -->
+    <br />
+    @Html.Label("Kullanıcı Adı") <!-- "Kullanıcı Adı" için bir etiket oluşturur. -->
+    @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control" })
+    <!-- Kullanıcı adı için giriş kutusu oluşturulur.
+         TextBoxFor metodu, modeldeki KullaniciAdi özelliğine bağlanır ve stil uygulanır. -->
+    <br />
+    @Html.Label("Sifre") <!-- "Şifre" için bir etiket oluşturur. -->
+    @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control" })
+    <!-- Şifre için giriş kutusu oluşturulur.
+         TextBoxFor metodu, modeldeki Sifre özelliğine bağlanır ve stil uygulanır. -->
+    <br />
+
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+    <!-- Formu göndermek için bir düğme eklenir. Bootstrap'in "btn" ve "btn-info" sınıfları kullanılarak stil uygulanır. -->
+
+</form>

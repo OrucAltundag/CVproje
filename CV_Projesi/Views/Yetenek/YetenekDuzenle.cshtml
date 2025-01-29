@@ -1,0 +1,25 @@
+﻿@model CV_Proje.Models.Entity.TBL_YETENEKLER
+@{
+    ViewBag.Title = "YetenekDuzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<H4> Yetenek Güncelleme Sayfası</H4>
+<br />
+<form method="post">
+ 
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.Yetenek, new { @class = "form-control" })
+    <br />
+    @Html.Label("Alt Başlık")
+    @Html.TextBoxFor(x => x.Oran, new { @class = "form-control" })
+
+
+
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+
+</form>
+

@@ -1,0 +1,23 @@
+﻿@using CV_Proje.Models.Entity
+@model List<TBL_HOBILERIM>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@using (Html.BeginForm()) // Formun başlangıcını başlatıyor. Formu HTTP POST ile gönderilecek şekilde açar.
+{
+
+    for (int i = 0; i < Model.Count; i++)
+    {@Html.HiddenFor(model => model[i].ID) <!-- ID'yi gizli alan olarak tutar --> <div>
+        @Html.LabelFor(model => model[i].Aciklama1) <!-- Aciklama1 için etiket -->
+        @Html.TextAreaFor(model => model[i].Aciklama1, new { @class = "form-control", rows = 3 }) <!-- Aciklama1 için TextArea -->
+    </div>
+    <div>
+        @Html.LabelFor(model => model[i].Aciklama2) <!-- Aciklama2 için etiket -->
+        @Html.TextAreaFor(model => model[i].Aciklama2, new { @class = "form-control", rows = 3 }) <!-- Aciklama2 için TextArea -->
+    </div>
+}
+<br />
+<input class="btn btn-success" type="submit" value="Güncelle" />
+
+}

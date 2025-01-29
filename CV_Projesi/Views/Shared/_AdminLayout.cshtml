@@ -1,0 +1,169 @@
+﻿
+@{
+    Layout = null;  // Bu satır, Razor motorunda sayfa düzeni belirtir. Layout=null ifadesi bu sayfanın bir düzen dosyasına ihtiyacı olmadığını ifade eder.
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"> <!-- Sayfanın karakter setini UTF-8 olarak tanımlar, Türkçe karakter desteği sağlar. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Tarayıcının Internet Explorer için uyumluluk modunu tanımlar. -->
+    <title>AdminLTE 3 | Project Add</title>  <!-- Sayfa başlığını belirler. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Sayfanın mobil cihazlarda uyumlu görünmesini sağlar. -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css"> <!-- Font Awesome kütüphanesini ekler, ikonları kullanmamızı sağlar. -->
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> <!-- Ionicons kütüphanesini ekler, ekstra ikon seti sağlar. -->
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="/AdminLTE-3.0.4/dist/css/adminlte.min.css"> <!-- AdminLTE teması için gerekli CSS dosyasını ekler. -->
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet"> <!-- Google fontlarıyla sayfa için belirli yazı tiplerini kullanır. -->
+</head>
+<body class="hold-transition sidebar-mini">
+    <!-- Sayfanın gövdesini tanımlar ve AdminLTE'nin sidebar-mini sınıfını kullanır. -->
+    <!-- Site wrapper -->
+    <div class="wrapper">
+        <!-- Sayfanın tüm içeriğini kapsayan ana div. -->
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Ana sidebar'ı tanımlar ve koyu bir tema kullanır. -->
+            <!-- Brand Logo -->
+            <a href="/Default/Index/" class="brand-link">
+                <!-- Site ana sayfasına yönlendiren bağlantı. -->
+                <img class="brand-text font-weight-light" style="width:50px ;margin:13px " src="https://e7.pngegg.com/pngimages/330/416/png-clipart-home-page-the-noun-project-icon-red-home-text-photography-thumbnail.png" img/>  <!-- Logoyu ve onun görünümünü ayarlar. -->
+                <span class="brand-text font-weight-light">SİTEYE GİT</span>  <!-- Logo yanında metin gösterir. -->
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar içeriğini kapsayan div. -->
+                <!-- Sidebar user (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <!-- Kullanıcı bilgileri alanı. -->
+                    <div class="image">
+                        <img src="https://w7.pngwing.com/pngs/306/70/png-transparent-computer-icons-management-admin-silhouette-black-and-white-neck.png" class="img-circle elevation-2" alt="User Image"> <!-- Kullanıcı resmi. -->
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">Admin Paneli</a> <!-- Admin paneline yönlendiren bağlantı. -->
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <!-- Sidebar menü içeriği için navigasyon alanı. -->
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Menü listesi için ayarlamalar. -->
+
+                        <li class="nav-item has-treeview">
+                            <!-- Menü ögesini tanımlar. -->
+                            <a href="/Hakkımda/Index" class="nav-link">
+                                <!-- Hakkımda sayfasına yönlendiren bağlantı. -->
+                                <i class="nav-icon fas fa-user"></i> <!-- Kullanıcı ikonunu gösterir. -->
+                                <p>
+                                    Hakkımda
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/Egitim/Index" class="nav-link">
+                                <!-- Eğitim sayfasına yönlendiren bağlantı. -->
+                                <i class="nav-icon fas fa-graduation-cap"></i>
+                                <p>
+                                    Eğitimlerim
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="/Deneyim/Index" class="nav-link">
+                                <i class="nav-icon fas fa-briefcase"></i>
+                                <p>
+                                    Deneyimlerim
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="/Hobi/Index" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Hobilerim
+
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Yetenek/Index" class="nav-link">
+                                <i class="nav-icon fas fa-chart-pie"></i>
+                                <p>
+                                    Yeteneklerim
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Sertifika/Index" class="nav-link">
+                                <i class="nav-icon far fa-copy"></i>
+                                <p>
+                                    Sertifikalarım
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Iletisim/Index" class="nav-link">
+                                <i class="nav-icon fas fa-phone"></i>
+                                <p>
+                                    İletişim
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/SosyalMedya/Index" class="nav-link">
+                                <i class="nav-icon fas fa-thumbs-up"></i>
+                                <p>
+                                    Sosyal Medya
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Admin/Index" class="nav-link">
+                                <i class="nav-icon fas fa-key"></i>
+                                <p>
+                                    Ayarlar
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Login/LogOut" class="nav-link">
+                                <i class="nav-icon fas fa-car"></i>
+                                <p>
+                                    Çıkış
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Ana içerik alanını kapsar. -->
+            <!-- Main content -->
+            <section class="content">
+                <!-- Ana içerik bölgesi. -->
+                <div class="row">
+                    <div class="col-md-12">
+                        @RenderBody()  <!-- Razor'da, ana içerik bölümünü burada gösterir. -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- JavaScript kütüphaneleri -->
+    <script src="/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
+    <script src="/AdminLTE-3.0.4/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/AdminLTE-3.0.4/dist/js/adminlte.min.js"></script>
+    <script src="/AdminLTE-3.0.4/dist/js/demo.js"></script>
+</body>
+</html>
